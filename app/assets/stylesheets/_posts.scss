@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  box-sizing: border-box;
+}
+
+.side-contents{
+  width: 200px;
+  height: 700px;
+  padding: 20px;
+}
+
+.side-content{
+  font-size: 18px;
+  margin-top: 30px;
+  position: fixed;
+  &__home{
+    margin-bottom: 15px;
+  }
+  &__search{
+    margin-bottom: 15px;
+  }
+  &__library{
+    margin-bottom: 15px;
+  }
+  &__account{
+    margin-bottom: 15px;
+  }
+  &__ranking{
+    margin-bottom: 15px;
+  }
+  &__withdraw{
+    margin-bottom: 15px;
+  }
+  &__deposit{
+    margin-bottom: 15px;
+  }
+  &__setting{
+    margin-bottom: 15px;
+  }
+}
+
+.main-contents{
+  width: 100%;
+  height: 100%;
+}
+
+.main-content__recommend{
+  height: 120px;
+  width: 100%;
+  background-color: #696969;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 20px;
+  &__notice{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}  
+.main-content__recommned__title{
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.main-content__game{
+  display: inline-block;
+  margin-top: 150px;
+  padding: 30px 0;
+  width: 100%;
+  position: relative;
+  &__title{
+    font-size: 25px;
+  }
+  &__list{
+    width: 1000px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    flex-wrap: wrap;
+    top: 100px;
+    left: 10px;
+    }
+  }
+
+.main-content__game__list__image{
+  margin-bottom: 50px;
+  &__text{
+    width: 350px;
+    height: 50px;
+    font-size: 12px;
+  }
+}
+
+.image{
+  height: 230px;
+  width: 350px;
+}
