@@ -1,24 +1,36 @@
-# README
+# DB設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Users
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null :false|
+|name_kana|string|null :false|
+|nickname|string|null :false|
+|sex|integer|null :false|
+|birthday|integer|null :false|
+|email|string|null :false|
+|password|string|null :false|
+|tel|integer|null :false|
+|identification|string|null :false|
+|point|integer||
+|ranking|integer||
+|total_prize|integer||
+|league|integer|null :false|
 
-Things you may want to cover:
+### Association
+belongs_to: tournaments
 
-* Ruby version
+## tournaments
+|Column|Type|Options|
+|------|----|-------|
+|tournament_name|string|null :false|
+|prize|integer||
+|ranking|integer|null :false|
+|point|integer|null :false|
+|content|string|null :false|
+|date|integer|null :false|
+|user_id|integer|null :false, foreign_key: true|
+|game_id|integer|null :false, foreign_key: true|
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+has_many: users
