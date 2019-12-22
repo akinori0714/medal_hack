@@ -3,11 +3,13 @@
     .account-page__inner--left.account-page__header
       = image_tag "logo.jpg", class: "logo"
       %h2 サインイン
-      %h5 登録しているユーザーでログイン
-      = render "devise/shared/links"
       .account-page__inner--right.user-form
         = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
           .field
+            .field-label
+              = f.label :name
+              .field-input
+                = f.text_field :name, autofocus: true, autocomplete: "name"
             .field-label
               = f.label :email
             .field-input
@@ -18,5 +20,8 @@
                 %i (英数字8文字以上)
               .field-input
                 = f.password_field :password, autocomplete: "off"
-            .actions
-              = f.submit "今すぐログイン", class: 'btn'
+            .action
+              .action-input
+                = f.submit "今すぐログイン", class: 'btn'
+              .action-label
+                = render "devise/shared/links"

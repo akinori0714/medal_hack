@@ -4,10 +4,13 @@
       = image_tag "logo.jpg", class: "logo"
       %h2 アカウントの新規作成
       .account-page__inner--right.user-form
-        = form_for()
         = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
           = render "devise/shared/error_messages", resource: resource
           .field
+            .field-label
+              = f.label :name
+              .field-input
+                = f.text_field :name, autofocus: true, autocomplete: "name"
             .field-label
               = f.label :email
               .field-input
@@ -23,5 +26,6 @@
                 = f.label :password_confirmation
                 .field-input
                   = f.password_field :password_confirmation, autocomplete: "new-password"
-              .actions
-                = f.submit "アカウントの新規作成", class: "btn"
+              .action
+                .action-input
+                  = f.submit "アカウントの新規作成", class: "btn"

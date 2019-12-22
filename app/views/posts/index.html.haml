@@ -2,10 +2,15 @@
   .side-contents
     %ul.side-content
       %li.side-content__home ホーム
+      %li.side-content__edit
+        = link_to "新規会員登録", new_user_registration_path, class: "account-new-btn"
+      %li.side-content__edit
+        = link_to "ログイン", new_user_session_path, class: "account-new-btn"
       %li.side-content__search 検索
       %li.side-content__library ライブラリ
       %li.side-content__account アカウント情報
       %li.side-content__ranking ランキング
+      %li.side-content__tournament 大会
       %li.side-content__withdraw 出金
       %li.side-content__deposit 入金
       %li.side-content__setting 設定
@@ -19,23 +24,32 @@
           ○月○日 ディスガイア大会  優勝賞金：5,000円
         %li.main-content__recommned__title__second
           ○月○日 ストリートファイター大会  優勝賞金：:1万円
+
     .main-content__game
       .main-content__game__title
-        おすすめゲーム
+        ゲーム一覧
       .main-content__game__list
         .main-content__game__list__image
           = image_tag "pic1.jpg", class: "image"
+          .main-cotent__game__list__image__title
+            タイトル：魔界戦記 ディスガイア
           .main-content__game__list__image__text
             悪魔的やりこみSRPGゲーム。
         .main-content__game__list__image
           = image_tag "pic2.jpg", class: "image"
+          .main-cotent__game__list__image__title
+            タイトル：ぷよぷよ
           .main-content__game__list__image__text
             株式会社コンパイルが発売した落ち物パズルゲームのシリーズ。 また、このシリーズにブロックとして登場するスライムタイプのモンスターの名前でもある。
         .main-content__game__list__image
           = image_tag "pic3.jpg", class: "image"
+          .main-cotent__game__list__image__title
+            タイトル：STREET FIGHTER
           .main-content__game__list__image__text
             カプコンが1987年に開発・稼動した2D対戦型格闘ゲーム
         .main-content__game__list__image
           = image_tag "pic4.jpg", class: "image"
+          .main-cotent__game__list__image__title
+            タイトル：マリオカート
           .main-content__game__list__image__text
             任天堂が開発・発売しているアクションレースゲームのシリーズ

@@ -35,13 +35,6 @@
       font-size: 14px;
       font-weight: 200;
     }
-
-    .btn {
-      margin-top: 20px;
-      color: black;
-      background-color: gold;
-      font-size: 14px;
-    }
   }
 
   .field {
@@ -65,24 +58,6 @@
         letter-spacing: 1px;
       }
     }
-  }
-
-  .btn {
-    display: inline-block;
-    height: 50px;
-    margin-left: 330px;
-    padding: 0 30px;
-    line-height: 50px;
-    letter-spacing: 1px;
-    text-align: center;
-    border: none;
-    border-radius: 2px;
-  }
-
-  input[type='submit'] {
-    margin-top: 40px;
-    color: black;
-    background-color: gold;
   }
 
   .field-label {
@@ -112,7 +87,33 @@
 }
 
 .logo{
-  height: 140px;
+  height: 130px;
   width: 100%;
   margin-bottom: 20px;
+}
+
+.action{
+  input[type='submit'] {
+    margin-top: 20px;
+    margin-left: 330px;
+    background-color: gold;
+  }
+  .action-label{
+    padding-top: 15px;
+    .foget{
+      color: white;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  height: 50px;
+  padding: 0 30px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+  background-color: gold;
 }
