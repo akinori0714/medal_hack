@@ -3,9 +3,11 @@
     %ul.side-content
       %li.side-content__home ホーム
       %li.side-content__edit
-        = link_to "新規会員登録", new_user_registration_path, class: "account-new-btn"
+        = link_to "新規会員登録", new_user_registration_path, class: "account-new-btn" 
       %li.side-content__edit
         = link_to "ログイン", new_user_session_path, class: "account-new-btn"
+        %li.side-content__edit
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'account-new-btn'
       %li.side-content__search 検索
       %li.side-content__library ライブラリ
       %li.side-content__account アカウント情報
