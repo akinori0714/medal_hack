@@ -4,9 +4,6 @@
 
 .wrapper{
   box-sizing: border-box;
-}
-
-.header{
   width: 100%;
   height: 70px;
   position: fixed;
@@ -50,11 +47,25 @@
     margin: 2px 20px 0 0 ;
     line-height: 70px;
   }
+  &__mylist{
+    height: 70px;
+    margin: 2px 20px 0 0 ;
+    line-height: 70px;
+  }
+  &__advertising{
+    height: 40px;
+    line-height: 22px;
+    margin: 17px 20px 0 0 ;
+    padding: 8px;
+    width: 500px;
+    border: 1px solid gold;
+    color: gold;
+  }
 }
 
 .secondary-navigation{
   text-align: right;
-  width: 100%;
+  width: 500px;
   height: 70px;
   line-height: 70px;
   margin: 2px 20px 0 0 ;
@@ -66,61 +77,109 @@
   padding: 0 10px;
 }
 
-.main-contents{
+
+.main-content{
   width: 100%;
   height: 100%;
-  padding-top: 70px;
-}
-
-.main-content__recommend{
-  height: 130px;
-  width: 100%;
-  background-color: #696969;
-  &__title{
-    padding-left: 10px;
-    font-size: 30px;
-  }
-  &__first{
-    padding-left: 10px;
-  }
-  &__second{
-    padding-left: 10px;
-  }
-}  
-
-
-.main-content__game{
-  display: inline-block;
-  margin-top: 150px;
-  padding: 30px 0;
-  width: 100%;
   position: relative;
-  &__title{
-    font-size: 25px;
+  padding: 20px 40px 40px 20px;
+  position: relative;
+  .topvideo{
+    height: 450px;
+    width: 70%;
+    float: right;
   }
-  &__list{
-    width: 1000px;
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
+  &__explain{
+    width: 25%;
     position: absolute;
-    flex-wrap: wrap;
-    top: 100px;
-    left: 10px;
+    top: 45px;
+    left: 35px;
+    z-index: 5000;
+    h3{
+      font-size: 30px;
+    }
+    p{
+      padding-top: 10px;
+      font-size: 14px
+    }
+    h4{
+      height: 100px;
+      line-height: 80px;
+      text-align: center;
+      margin-top: 20px;
+      padding: 8px;
+      border: 1px solid gold;
+    }
+    &__input{
+      margin-top: 40px;
+      font-size: 16px;
+      font-weight: bold;
+      .download-btn{
+        background-color: gold;
+        color: black;
+        padding: 8px 8px;
+        border: 1px solid gold;
+        border-radius: 3px;
+        width: 45%;
+        font-size: 16px;
+        &:hover{
+          transform: scale(1.05,1.05);
+          background-color: #faff00;
+          border: 1px solid #faff00;
+        }
+      }
+      &__mylist{
+        background-color: black;
+        color: white;
+        border: 1px solid #f5f5f5;
+        padding: 8px;
+        width: 45%;
+        float: right;
+        text-align: center;
+        border-radius: 3px;
+        &:hover{
+          transform: scale(1.05,1.05);
+        }
+        .mylist-btn{
+          background-color: black;
+          color: white;
+          border: none;
+        }
+      }
+      .tournament-btn{
+        background-color: red;
+        color: white;
+        padding: 8px;
+        border: 1px solid red;
+        border-radius: 3px;
+        width: 100%;
+        margin-top: 25px;
+        &:hover{
+          transform: scale(1.05,1.05);
+        }
+      }
     }
   }
-
-.main-content__game__list__image{
-  margin-bottom: 50px;
-  &__text{
-    margin-top: 15px;
-    width: 350px;
-    height: 50px;
-    font-size: 12px;
+  &__game{
+    width: 100%;
+    position: absolute;
+    top: 480px;
+    h2{
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    ul{
+      overflow-x: auto;
+      display: flex;
+    }
+    &__list{
+      overflow: scroll;
+    }
+    .image{
+      height: 120px;
+      width: 170px;
+      margin-right: 10px;
+    }
   }
-}
-
-.image{
-  height: 230px;
-  width: 350px;
 }

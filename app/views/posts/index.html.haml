@@ -1,16 +1,19 @@
-.header
+.wrapper
   .header-navigation
     .primary__navigation
       .primary__navigation__logo
         = image_tag "logo.jpg", class: "toplogo"
-      .primary__navigation__game
-        %p ゲーム一覧
       .primary__navigation__tournament
         %p 大会
       .primary__navigation__ranking
         %p ランキング
+      .primary__navigation__mylist
+        %p マイリスト
+      .primary__navigation__advertising
+        %label ここに大会の広告を右から左に流す
     .secondary-navigation
-      = icon('fas', 'search')
+      = icon('fas', 'search', class: "icon")
+      = icon('fas', 'user-circle', class: "icon")
       - if user_signed_in?
         = link_to "新規会員登録", new_user_registration_path, class: "account-new-btn" 
         = link_to "サインアウト", destroy_user_session_path, method: :delete, class: 'account-new-btn'
@@ -18,41 +21,40 @@
       - else
         = link_to "新規会員登録", new_user_registration_path, class: "account-new-btn"
         = link_to "サインイン", new_user_session_path, class: "account-new-btn"
-
-.main-contents
-  .main-content__recommend
-    .main-content__recommend__title
-      今月のイベント情報
-    .main-content__recommend__first
-      ○月○日 ディスガイア大会  優勝賞金：5,000円
-    .main-content__recommend__second
-      ○月○日 ストリートファイター大会  優勝賞金：:1万円
-
-  .main-content__game
-    .main-content__game__title
-      ゲーム一覧
-    .main-content__game__list
-      .main-content__game__list__image
+  
+  .main-content
+    .main-content__top
+    %iframe{src: "https://www.youtube.com/embed/HljJvwifETg?start=123showinfo=0&start=30&end=60&autoplay=0", frameborder: "0", class: "topvideo"}
+    .main-content__explain
+      %h3 マリオカート
+      %p  ゲームの説明。ゲームの説明。ゲームの説明。ゲームの説明。ゲームの説明。ゲームの説明。ゲームの説明。ゲームの説明。ゲームの説明。
+      %h4 広告欄
+      .main-content__explain__input
+        %input{type: "submit", value: "ゲームダウンロード", class: "download-btn"}
+        .main-content__explain__input__mylist        
+          = icon("fas", "plus")
+          %input{type: "submit", value: "マイリスト", class: "mylist-btn"}
+        %input{type: "submit", value: "大会参加", class: "tournament-btn"}
+    .main-content__game
+      %h2 ゲーム一覧
+      %ul.main-content__game__list
+        %li
         = image_tag "pic1.jpg", class: "image"
-        .main-cotent__game__list__image__title
-          タイトル：魔界戦記 ディスガイア
-        .main-content__game__list__image__text
-          悪魔的やりこみSRPGゲーム。
-      .main-content__game__list__image
+        %li
         = image_tag "pic2.jpg", class: "image"
-        .main-cotent__game__list__image__title
-          タイトル：ぷよぷよ
-        .main-content__game__list__image__text
-          株式会社コンパイルが発売した落ち物パズルゲームのシリーズ。 また、このシリーズにブロックとして登場するスライムタイプのモンスターの名前でもある。
-      .main-content__game__list__image
+        %li
         = image_tag "pic3.jpg", class: "image"
-        .main-cotent__game__list__image__title
-          タイトル：STREET FIGHTER
-        .main-content__game__list__image__text
-          カプコンが1987年に開発・稼動した2D対戦型格闘ゲーム
-      .main-content__game__list__image
+        %li
         = image_tag "pic4.jpg", class: "image"
-        .main-cotent__game__list__image__title
-          タイトル：マリオカート
-        .main-content__game__list__image__text
-          任天堂が開発・発売しているアクションレースゲームのシリーズ
+        %li
+        = image_tag "pic5.jpg", class: "image"
+        %li
+        = image_tag "pic6.jpg", class: "image"
+        %li
+        = image_tag "pic7.jpg", class: "image"
+        %li
+        = image_tag "pic8.jpg", class: "image"
+        %li
+        = image_tag "pic9.jpg", class: "image"
+        %li
+        = image_tag "pic10.jpg", class: "image"        
