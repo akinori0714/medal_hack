@@ -1,8 +1,8 @@
 .main-content
   .main-content__top
-    %iframe{src: "https://www.youtube.com/embed/HljJvwifETg?start=123showinfo=0&start=30&end=60&autoplay=0", frameborder: "0", class: "topvideo"}
+    %iframe{src: "https://www.youtube.com/embed/Ch29Eh9bWdI", frameborder: "0", class: "topvideo"}
     .main-content__explain
-      %h3 マリオカート
+      %h3 ディスガイア
       %p  ゲームの説明。ゲームの説明。ゲームの説明。ゲームの説明。ゲームの説明。ゲームの説明。ゲームの説明。ゲームの説明。ゲームの説明。
       %h4 広告欄
       .main-content__explain__input
@@ -15,7 +15,7 @@
       %h2 ゲーム一覧
       %ul.main-content__game__list
         %li
-        = link_to image_tag("pic1.jpg", class: "image"), games_path(@games)
+        = image_tag "pic1.jpg", class: "image"
         %li
         = image_tag "pic2.jpg", class: "image"
         %li
@@ -33,4 +33,4 @@
         %li
         = image_tag "pic9.jpg", class: "image"
         %li
-        = image_tag "pic10.jpg", class: "image"        
+        = image_tag "pic10.jpg", class: "image"

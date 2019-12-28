@@ -7,4 +7,26 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+  .header-navigation
+    .primary__navigation
+      .primary__navigation__logo
+        = link_to image_tag("logo.jpg", class: "toplogo"), root_path
+      .primary__navigation__tournament
+        %p 大会
+      .primary__navigation__ranking
+        %p ランキング
+      .primary__navigation__mylist
+        %p マイリスト
+      .primary__navigation__advertising
+        %label ここに大会の広告を右から左に流す
+    .secondary-navigation
+      = icon('fas', 'search', class: "icon")
+      = icon('fas', 'user-circle', class: "icon")
+      - if user_signed_in?
+        = link_to "新規会員登録", new_user_registration_path, class: "account-new-btn" 
+        = link_to "サインアウト", destroy_user_session_path, method: :delete, class: 'account-new-btn'
+
+      - else
+        = link_to "新規会員登録", new_user_registration_path, class: "account-new-btn"
+        = link_to "サインイン", new_user_session_path, class: "account-new-btn"
+  = yield
