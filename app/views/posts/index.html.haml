@@ -1,29 +1,5 @@
-.wrapper
-  .header-navigation
-    .primary__navigation
-      .primary__navigation__logo
-        = image_tag "logo.jpg", class: "toplogo"
-      .primary__navigation__tournament
-        %p 大会
-      .primary__navigation__ranking
-        %p ランキング
-      .primary__navigation__mylist
-        %p マイリスト
-      .primary__navigation__advertising
-        %label ここに大会の広告を右から左に流す
-    .secondary-navigation
-      = icon('fas', 'search', class: "icon")
-      = icon('fas', 'user-circle', class: "icon")
-      - if user_signed_in?
-        = link_to "新規会員登録", new_user_registration_path, class: "account-new-btn" 
-        = link_to "サインアウト", destroy_user_session_path, method: :delete, class: 'account-new-btn'
-
-      - else
-        = link_to "新規会員登録", new_user_registration_path, class: "account-new-btn"
-        = link_to "サインイン", new_user_session_path, class: "account-new-btn"
-  
-  .main-content
-    .main-content__top
+.main-content
+  .main-content__top
     %iframe{src: "https://www.youtube.com/embed/HljJvwifETg?start=123showinfo=0&start=30&end=60&autoplay=0", frameborder: "0", class: "topvideo"}
     .main-content__explain
       %h3 マリオカート

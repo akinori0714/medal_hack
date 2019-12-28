@@ -2,20 +2,14 @@
   box-sizing: border-box;
 }
 
-.wrapper{
-  box-sizing: border-box;
-  width: 100%;
-  height: 70px;
-  position: fixed;
-  background-color: black;
-  z-index: 9999;
-}
-
 .header-navigation{
   width: 100%;
   height: 70px;
   display: flex;
   line-height: 70px;
+  z-index: 9999;
+  position: fixed;
+  background-color: black;
 }
 
 .primary__navigation{
@@ -81,19 +75,14 @@
 .main-content{
   width: 100%;
   height: 100%;
-  position: relative;
-  padding: 20px 40px 40px 20px;
-  position: relative;
+  padding: 90px 30px 30px 20px;
   .topvideo{
     height: 450px;
     width: 70%;
     float: right;
   }
   &__explain{
-    width: 25%;
-    position: absolute;
-    top: 45px;
-    left: 35px;
+    width: 28%;
     z-index: 5000;
     h3{
       font-size: 30px;
@@ -163,7 +152,7 @@
   &__game{
     width: 100%;
     position: absolute;
-    top: 480px;
+    top: 550px;
     h2{
       font-size: 20px;
       font-weight: bold;
@@ -172,6 +161,9 @@
     ul{
       overflow-x: auto;
       display: flex;
+      li{
+        display: inline-block;
+      }
     }
     &__list{
       overflow: scroll;
