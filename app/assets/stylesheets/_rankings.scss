@@ -20,6 +20,25 @@
       font-size: 20px;
     }
   }
+  &__tab{
+    width: 100%;
+    ul{
+      text-align: center;
+      list-style: none;
+      color: white;
+    }
+    li{
+      position: relative;
+      display: block;
+      }
+      .dropdwn_menu{
+        display: none;
+        position: absolute;
+        margin-left: -5px;
+        margin-top: 5px;
+        background-color: red;
+      }
+  }
   &__table{
     width: 700px;
     margin: 50px auto;
