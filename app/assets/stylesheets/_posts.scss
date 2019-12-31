@@ -50,7 +50,7 @@
     margin: 2px 20px 0 0 ;
     line-height: 70px;
   }
-  &__advertising{
+  .primary__navigation__advertising{
     height: 40px;
     line-height: 22px;
     margin: 17px 20px 0 0 ;
@@ -58,6 +58,18 @@
     width: 500px;
     border: 1px solid gold;
     color: gold;
+    overflow : hidden;
+    &__text{
+      white-space: nowrap;
+      animation-name: marquee;
+      animation-duration: 20s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      }
+      @keyframes marquee {
+        from    { transform: translate(100%); } 
+        100%,to { transform: translate(-170%); }
+    }
   }
 }
 
