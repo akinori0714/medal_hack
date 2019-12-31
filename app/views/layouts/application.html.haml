@@ -14,19 +14,29 @@
       .primary__navigation__tournament
         %p 大会
       .primary__navigation__ranking
-        %p ランキング
+        = link_to "ランキング", rankings_path, class: "ranking-link"
       .primary__navigation__mylist
         %p マイリスト
       .primary__navigation__advertising
-        %label ここに大会の広告を右から左に流す
+        .primary__navigation__advertising__text
+          【大会情報】1月30日〜2月10日 マリオカート優勝賞金:1万円、1月30日〜2月10日 ディスガイア 優勝賞金:5千円
     .secondary-navigation
-      = icon('fas', 'search', class: "icon")
-      = icon('fas', 'user-circle', class: "icon")
+      %h4 アカウント名
       - if user_signed_in?
-        = link_to "新規会員登録", new_user_registration_path, class: "account-new-btn" 
-        = link_to "サインアウト", destroy_user_session_path, method: :delete, class: 'account-new-btn'
-
+        %h5
+          = current_user.name
       - else
-        = link_to "新規会員登録", new_user_registration_path, class: "account-new-btn"
-        = link_to "サインイン", new_user_session_path, class: "account-new-btn"
+        %h5 サインインして下さい
+      %button{id: "menu"} 
+        = image_tag("account.png", class: "account-button")
+      %ul.account
+        %li アカウント情報  
+        %li ヘルプセンター
+        %li 
+          - if user_signed_in?
+            = link_to "新規会員登録", new_user_registration_path, class: "account-new-btn" 
+            = link_to "サインアウト", destroy_user_session_path, method: :delete, class: 'account-new-btn'
+          - else
+            = link_to "新規会員登録", new_user_registration_path, class: "account-new-btn"
+            = link_to "サインイン", new_user_session_path, class: "account-new-btn"
   = yield
