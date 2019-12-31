@@ -1,0 +1,16 @@
+.inquiry
+  %h2 お問い合わせ
+  .inquiry__form
+    .inquiry__form__email
+      %input{name: "inquiry", placeholder: "例） aaa@gmail.com", type: "email", value: "", class: "inquiry-form-email"}
+    .inquiry__form__select
+      %select{name: "inquiry", class: "inquiry-form-select"}
+        %option{value: 0} ゲームについて
+        %option{value: 1} リーグについて
+        %option{value: 2} レートについて
+        %option{value: 3} 大会について
+        %option{value: 4} 出金について
+    .inquiry__form__text
+      %textarea{name: "inquiry", placeholder: "賞金が反映されない。", type: "email", value: "", class: "inquiry-form-text"}
+    .inquiry__form__submit
+      %input{type: "submit", value: "送信", class: "inquiry-form-submit"}
