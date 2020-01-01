@@ -1,0 +1,48 @@
+.account-info
+  %h2 アカウント情報
+  .account-info__form
+    .account-info__form__handle-name
+      %h3 ハンドルネーム
+      %h4
+        = current_user.name
+    .account-info__form__handle-name
+      %h3 Email
+      %h4
+        = current_user.email
+    .account-info__form__sale
+      %h3 獲得賞金
+      %h4 10,000円
+    .account-info__form__league
+      %h3 所属リーグ
+      .account-info__form__league__list
+        %table{border: "1"}
+          %thead
+            %tr
+              %th ゲーム名
+              %th 所属リーグ
+              %th レート
+              %th 順位
+          %tbody
+            %tr
+              %td ぷよぷよ
+              %td Aリーグ
+              %td 10000
+              %td 3
+          %tbody
+            %tr
+              %td ディスガイア
+              %td Dリーグ
+              %td 100
+              %td 200
+          %tbody
+            %tr
+              %td パワプロ
+              %td Bリーグ
+              %td 5000
+              %td 10
+          %tbody
+            %tr
+              %td ストリートファイター
+              %td Cリーグ
+              %td 2000
+              %td 50

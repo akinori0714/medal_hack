@@ -117,3 +117,70 @@
   border-radius: 2px;
   background-color: gold;
 }
+
+.account-info{
+  padding-top: 130px;
+  width: 700px;
+  margin: 0 auto;
+  h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 1px solid gold;
+  }
+  &__form{
+    margin-top: 30px;
+    padding: 8px;
+    &__handle-name{
+      display: flex;
+      padding-bottom: 20px;
+      h3{
+        font-weight: bold;
+        color: gold;
+        font-size: 20px;
+        }
+      h4{
+        margin: 0 0 0 auto;
+        }
+    }
+    &__sale{
+      padding-bottom: 20px;
+      display: flex;
+      h3{
+      font-weight: bold;
+      color: gold;
+      font-size: 20px;
+      }
+      h4{
+        margin: 0 0 0 auto;
+      }
+    }
+    &__league{
+      padding-bottom: 20px;
+      position: relative;
+      h3{
+      font-weight: bold;
+      color: gold;
+      font-size: 20px;
+      }
+      &__list{
+        margin: 10px auto;
+        position: absolute;
+        top: 40px;
+        left: 95px;
+        table{
+          width: 500px;
+          text-align: center;
+        }
+        th{
+          text-align: center;
+          background-color: orangered;
+        }
+        td{
+          background-color: white;
+          color: black;
+        }
+      }
+    } 
+  }
+}
