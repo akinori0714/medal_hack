@@ -12,7 +12,7 @@
       .primary__navigation__logo
         = link_to image_tag("logo.jpg", class: "toplogo"), root_path
       .primary__navigation__tournament
-        %p 大会
+        = link_to "大会", tournaments_path, class: "tournament-link"
       .primary__navigation__ranking
         = link_to "ランキング", rankings_path, class: "ranking-link"
       .primary__navigation__mylist

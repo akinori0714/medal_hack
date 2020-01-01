@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :games
   resources :rankings
   resources :inquiries
+  resources :tournaments
 end
