@@ -30,7 +30,8 @@
       %button{id: "menu"} 
         = image_tag("account.png", class: "account-button")
       %ul.account
-        %li アカウント情報  
+        %li
+          = link_to "アカウント情報", account_users_path, class: "account-new-btn" 
         %li
           = link_to "お問い合わせ", inquiries_path, class: "account-new-btn"
         %li 
