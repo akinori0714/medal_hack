@@ -2,7 +2,7 @@
   .account-page__inner {
     width: 980px;
     margin: auto;
-    padding: 40px 60px 60px 60px;
+    padding: 20px;
 
     .account-page__inner--left, .account-page__inner--right {
       width: 100%;
@@ -15,12 +15,11 @@
   }
 
   .account-page__header {
-    h2 {
+    h2{
       margin-bottom: 10px;
       letter-spacing: 3px;
       font-size: 20px;
       font-weight: 200;
-
       &:after {
         content: '';
         display: block;
@@ -29,7 +28,6 @@
         border-bottom: 1px solid gold;
       }
     }
-
     h5 {
       margin-bottom: 20px;
       font-size: 14px;
@@ -39,27 +37,28 @@
 
   .field {
     margin-bottom: 10px;
-
     .field-label {
-      padding: 20px 0;
+      padding: 5px;
       letter-spacing: 1px;
       font-size: 14px;
       font-weight: 200;
-
-      i {
-        font-size: 11px;
+      width: 100%;
+      .form-input{
+        width: 300px;
+        padding: 8px;
+        border-radius: 3px;
+      }
+      .sex-btn{
+        font-size: 14px;
       }
     }
-
-    .field-input {
-      input {
-        width: 100%;
-        padding: 10px;
-        letter-spacing: 1px;
+    .field-area{
+      width: 100%;
+      .field-birthday{
+        float: right;
       }
     }
   }
-
   .field-label {
     .field_with_errors {
       display: inline-block;
@@ -67,6 +66,7 @@
       font-weight: 400;
     }
   }
+}
 
   .field-input {
     .field_with_errors {
@@ -84,7 +84,6 @@
       }
     }
   }
-}
 
 .logo{
   height: 130px;
@@ -119,7 +118,7 @@
 }
 
 .account-info{
-  padding-top: 130px;
+  padding-top: 70px;
   width: 700px;
   margin: 0 auto;
   h2{
@@ -141,7 +140,17 @@
         }
       h4{
         margin: 0 0 0 auto;
+        .edit-btn{
+          text-decoration: none;
+          color: white;
+          background-color: red;
+          font-size: 14px;
+          padding: 8px;
+          border-radius: 3px;
+          margin-left: 10px;
+          font-weight: bold;
         }
+      }
     }
     &__sale{
       padding-bottom: 20px;
@@ -153,6 +162,16 @@
       }
       h4{
         margin: 0 0 0 auto;
+        .withdraw-btn{
+          text-decoration: none;
+          color: white;
+          background-color: red;
+          font-size: 14px;
+          padding: 8px;
+          border-radius: 3px;
+          margin-left: 10px;
+          font-weight: bold; 
+        }
       }
     }
     &__league{
