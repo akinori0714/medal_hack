@@ -1,3 +1,5 @@
+= render partial: "layouts/header"
+
 .account-info
   %h2 アカウント情報
   .account-info__form
@@ -5,13 +7,17 @@
       %h3 ハンドルネーム
       %h4
         = current_user.name
+        = link_to "変更", "#", class: "edit-btn"
     .account-info__form__handle-name
       %h3 Email
       %h4
         = current_user.email
+        = link_to "変更", "#", class: "edit-btn"
     .account-info__form__sale
       %h3 獲得賞金
-      %h4 10,000円
+      %h4
+        10,000円
+        = link_to "出金", "#", class: "withdraw-btn"
     .account-info__form__league
       %h3 所属リーグ
       .account-info__form__league__list

@@ -7,38 +7,4 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-  .header-navigation
-    .primary__navigation
-      .primary__navigation__logo
-        = link_to image_tag("logo.jpg", class: "toplogo"), root_path
-      .primary__navigation__tournament
-        = link_to "大会", tournaments_path, class: "tournament-link"
-      .primary__navigation__ranking
-        = link_to "ランキング", rankings_path, class: "ranking-link"
-      .primary__navigation__mylist
-        %p マイリスト
-      .primary__navigation__advertising
-        .primary__navigation__advertising__text
-          【大会情報】1月30日〜2月10日 マリオカート優勝賞金:1万円、1月30日〜2月10日 ディスガイア 優勝賞金:5千円
-    .secondary-navigation
-      %h4 アカウント名
-      - if user_signed_in?
-        %h5
-          = current_user.name
-      - else
-        %h5 サインインして下さい
-      %button{id: "menu"} 
-        = image_tag("account.png", class: "account-button")
-      %ul.account
-        %li
-          = link_to "アカウント情報", account_users_path, class: "account-new-btn" 
-        %li
-          = link_to "お問い合わせ", inquiries_path, class: "account-new-btn"
-        %li 
-          - if user_signed_in?
-            = link_to "新規会員登録", new_user_registration_path, class: "account-new-btn" 
-            = link_to "サインアウト", destroy_user_session_path, method: :delete, class: 'account-new-btn'
-          - else
-            = link_to "新規会員登録", new_user_registration_path, class: "account-new-btn"
-            = link_to "サインイン", new_user_session_path, class: "account-new-btn"
   = yield
